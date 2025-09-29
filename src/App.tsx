@@ -3,8 +3,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Gallery from './components/Gallery';
 import PhotoDetail from './components/PhotoDetail';
 import SaveModal from './components/SaveModal';
-import { PhotoEntry } from './types';
 import { deleteEntry, loadEntries, saveEntry, shareEntry, takeAndSavePhoto, updateTitle } from './services/photoService';
+import { PhotoEntry } from './types';
 
 export default function App() {
   const [entries, setEntries] = useState<PhotoEntry[]>([]);

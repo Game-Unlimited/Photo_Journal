@@ -12,8 +12,7 @@ export default function Gallery({ entries, onOpen }: Props) {
     <div className="grid">
       {entries.map((e) => (
         <button key={e.id} className="card" onClick={() => onOpen(e.id)} aria-label={e.title}>
-          {/* eslint-disable-next-line jsx-a11y/alt-text */}
-          <img className="thumb" src={e.webPath ?? e.fileUri} />
+          <img className="thumb" src={e.webPath ?? e.fileUri} alt={e.title || 'photo'} />
           <div className="card-body">
             <div className="card-title">{e.title || 'Ảnh chưa có tiêu đề'}</div>
             <div>{new Date(e.createdAt).toLocaleString()}</div>

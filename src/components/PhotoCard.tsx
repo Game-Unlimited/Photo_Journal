@@ -15,8 +15,7 @@ export default function PhotoCard({ entry, onBack, onEditTitle, onDelete, onShar
     <div className="detail">
       <button className="btn secondary" onClick={onBack}>Quay lại</button>
       <div className="space"></div>
-      {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      <img src={entry.webPath ?? entry.fileUri} />
+      <img src={entry.webPath ?? entry.fileUri} alt={entry.title || 'photo'} />
       <div className="detail-meta">
         <div className="card-title" style={{ fontSize: 18 }}>{entry.title || 'Chưa có tiêu đề'}</div>
         <div>{new Date(entry.createdAt).toLocaleString()}</div>
